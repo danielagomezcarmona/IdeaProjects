@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<!--[if IE 7]>
+<!--<link rel="stylesheet" href="font-awesome/css/font-awesome-ie7.min.css">-->
+
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/all.min.css">
+<link rel="stylesheet" type="text/css" href="fontawesome-free-5.7.2-web/css/v4-shims.min.css">
+
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><link rel="stylesheet" type="text/css" href="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.css">
+<link rel="stylesheet" type="text/css" href="chartist/dist/chartist.min.css">
+<script src="chartist/dist/chartist.min.js"></script>
+<script src="chartist/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+<!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.10.19/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.10.19/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.10.19/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+<script type="text/javascript" src="datatables/1.10.19/datatables.bootstrap4.min.js"></script>
+<link type="text/css" href="datatables/1.10.19/datatables.bootstrap4.min.css" rel="stylesheet" />
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/><!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle"></span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="2f4c8a18d644799af0345a45c2265746c162d30e57971e90369ec4eb8b633546.html">Agregar Fechas En El Date Picker De La Opcion De Widgets En La Aplicacion Web De DemoQA</a></span>
+                > <span class="truncate-60"><a
+                    href="45215b007bc098fed574c7b3cabf8e989156ce0e07dca5d37f9da99128085d70.html">Agregar fechas en el Date Picker de la opcion de Widgets de manera exitosa </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="fa fa-check-square-o"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="fa fa-book"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="fa fa-comments-o"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="fa fa-info-circle"></i></a> Report generated 09-12-2022 18:09</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fa fa-2x fa-comments-o"></i>
+                                    <span class="story-header-title">Agregar Fechas En El Date Picker De La Opcion De Widgets En La Aplicacion Web De DemoQA </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='fa fa-check-circle-o success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Agregar fechas en el Date Picker de la opcion de Widgets de manera exitosa
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="909a88df4da26d3ec5d954a975cda624b696ba303b87da31ad806c39b61b13cb.png" title=" Given El cliente esta ubicado en el home" width="1920"/>
+                <img src="909a88df4da26d3ec5d954a975cda624b696ba303b87da31ad806c39b61b13cb.png" title=" Cliente opens the Home page" width="1920"/>
+                <img src="909a88df4da26d3ec5d954a975cda624b696ba303b87da31ad806c39b61b13cb.png" title=" Given El cliente esta ubicado en el home (completed)" width="1920"/>
+                <img src="4660fc8b57c2b81c2e3a0e1c7945e25be9134f9a6e616e994404bf615ffcb5d2.png" title=" When Selecciona la opcion de Widgets" width="1920"/>
+                <img src="4660fc8b57c2b81c2e3a0e1c7945e25be9134f9a6e616e994404bf615ffcb5d2.png" title=" Cliente select widgets" width="1920"/>
+                <img src="4660fc8b57c2b81c2e3a0e1c7945e25be9134f9a6e616e994404bf615ffcb5d2.png" title=" Cliente clicks on Click en Widgets" width="1920"/>
+                <img src="4660fc8b57c2b81c2e3a0e1c7945e25be9134f9a6e616e994404bf615ffcb5d2.png" title=" Cliente select widgets (completed)" width="1920"/>
+                <img src="4660fc8b57c2b81c2e3a0e1c7945e25be9134f9a6e616e994404bf615ffcb5d2.png" title=" When Selecciona la opcion de Widgets (completed)" width="1920"/>
+                <img src="61aa156a0f9b626869a75ad6abf287fdcf4eb6649ae00d440ae458d50bc982b8.png" title=" And Selecciona la opcion de Date Picker" width="1920"/>
+                <img src="61aa156a0f9b626869a75ad6abf287fdcf4eb6649ae00d440ae458d50bc982b8.png" title=" Cliente select date picker" width="1920"/>
+                <img src="61aa156a0f9b626869a75ad6abf287fdcf4eb6649ae00d440ae458d50bc982b8.png" title=" Cliente clicks on Click en Data Picker" width="1920"/>
+                <img src="ef19f87699cee2f6ab844508ee1447bebd5fadcc184c0bc9a765df23d748cdd2.png" title=" Cliente clicks on Click en Data Picker (completed)" width="1920"/>
+                <img src="ef19f87699cee2f6ab844508ee1447bebd5fadcc184c0bc9a765df23d748cdd2.png" title=" Cliente select date picker (completed)" width="1920"/>
+                <img src="ef19f87699cee2f6ab844508ee1447bebd5fadcc184c0bc9a765df23d748cdd2.png" title=" And Selecciona la opcion de Date Picker (completed)" width="1920"/>
+                <img src="8e067bb596b7d3f7d11e62fa83da1e026c73dd5d48f8fa5333bb809889880635.png" title=" Then Selecciona el campo de Select Date" width="1920"/>
+                <img src="8e067bb596b7d3f7d11e62fa83da1e026c73dd5d48f8fa5333bb809889880635.png" title=" Cliente select date" width="1920"/>
+                <img src="8e067bb596b7d3f7d11e62fa83da1e026c73dd5d48f8fa5333bb809889880635.png" title=" Cliente clicks on Click en campo de Select Date" width="1920"/>
+                <img src="dbd3128394e6d91c340e6df1750eaef92c507aa4505b019753122e31b9513fcd.png" title=" Cliente clicks on Click en campo de Select Date (completed)" width="1920"/>
+                <img src="dbd3128394e6d91c340e6df1750eaef92c507aa4505b019753122e31b9513fcd.png" title=" Cliente select date (completed)" width="1920"/>
+                <img src="dbd3128394e6d91c340e6df1750eaef92c507aa4505b019753122e31b9513fcd.png" title=" Then Selecciona el campo de Select Date (completed)" width="1920"/>
+                <img src="2b384e2e396f312d3111640681687d7021aebf3b26e20db4794f8499a5bb54ab.png" title=" And Selecciona una fecha exitosamente" width="1920"/>
+                <img src="2b384e2e396f312d3111640681687d7021aebf3b26e20db4794f8499a5bb54ab.png" title=" Cliente click date" width="1920"/>
+                <img src="2b384e2e396f312d3111640681687d7021aebf3b26e20db4794f8499a5bb54ab.png" title=" Cliente clicks on Seleccionar fecha en Date" width="1920"/>
+                <img src="2b384e2e396f312d3111640681687d7021aebf3b26e20db4794f8499a5bb54ab.png" title=" Cliente click date (completed)" width="1920"/>
+                <img src="2b384e2e396f312d3111640681687d7021aebf3b26e20db4794f8499a5bb54ab.png" title=" And Selecciona una fecha exitosamente (completed)" width="1920"/>
+                <img src="0ff6eda4f42791ca748f61cef38e2e8edc4a01d6fafea9b7b511d916caa45ced.png" title=" And Selecciona el campo de Date and Time" width="1920"/>
+                <img src="0ff6eda4f42791ca748f61cef38e2e8edc4a01d6fafea9b7b511d916caa45ced.png" title=" Cliente select date and time" width="1920"/>
+                <img src="0ff6eda4f42791ca748f61cef38e2e8edc4a01d6fafea9b7b511d916caa45ced.png" title=" Cliente clicks on Click en campo de Date and Time" width="1920"/>
+                <img src="0ff6eda4f42791ca748f61cef38e2e8edc4a01d6fafea9b7b511d916caa45ced.png" title=" Cliente select date and time (completed)" width="1920"/>
+                <img src="0ff6eda4f42791ca748f61cef38e2e8edc4a01d6fafea9b7b511d916caa45ced.png" title=" And Selecciona el campo de Date and Time (completed)" width="1920"/>
+                <img src="2fde5397635490e687cbbcb54699efdb5265c3e7c1a82ce7e02623ee546001c6.png" title=" And Selecciona una fecha y hora exitosamente" width="1920"/>
+                <img src="2fde5397635490e687cbbcb54699efdb5265c3e7c1a82ce7e02623ee546001c6.png" title=" Cliente click date time" width="1920"/>
+                <img src="2fde5397635490e687cbbcb54699efdb5265c3e7c1a82ce7e02623ee546001c6.png" title=" Cliente clicks on Seleccionar fecha en Date 2" width="1920"/>
+                <img src="2fde5397635490e687cbbcb54699efdb5265c3e7c1a82ce7e02623ee546001c6.png" title=" Cliente clicks on Seleccionar tiempo" width="1920"/>
+                <img src="b099339e0a6d57b634c09da523e58a358a51d2052c88967ca1bf1e40b8825203.png" title=" Cliente clicks on Seleccionar tiempo (completed)" width="1920"/>
+                <img src="b099339e0a6d57b634c09da523e58a358a51d2052c88967ca1bf1e40b8825203.png" title=" Cliente click date time (completed)" width="1920"/>
+                <img src="b099339e0a6d57b634c09da523e58a358a51d2052c88967ca1bf1e40b8825203.png" title=" And Selecciona una fecha y hora exitosamente (completed): <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 2.1.4</span>
+</div>
+</body>
+</html>
